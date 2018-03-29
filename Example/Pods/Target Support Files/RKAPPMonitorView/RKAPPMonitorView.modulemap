@@ -1,0 +1,6 @@
+framework module RKAPPMonitorView {
+  umbrella header "RKAPPMonitorView-umbrella.h"
+
+  export *
+  module * { export * }
+}

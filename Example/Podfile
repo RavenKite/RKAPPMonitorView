@@ -1,0 +1,13 @@
+platform :ios, '8.0'
+
+use_frameworks!
+
+target 'RKAPPMonitorView_Example' do
+  pod 'RKAPPMonitorView', :path => '../'
+
+  target 'RKAPPMonitorView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

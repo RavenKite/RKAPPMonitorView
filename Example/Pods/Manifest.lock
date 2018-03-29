@@ -1,0 +1,16 @@
+PODS:
+  - RKAPPMonitorView (0.1.0)
+
+DEPENDENCIES:
+  - RKAPPMonitorView (from `../`)
+
+EXTERNAL SOURCES:
+  RKAPPMonitorView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  RKAPPMonitorView: 71cab2780c4d0c85096f28ddd70860ea120210cb
+
+PODFILE CHECKSUM: 8db4bd99382549ff4759d92c8afdcd0cdfcc4965
+
+COCOAPODS: 1.4.0
