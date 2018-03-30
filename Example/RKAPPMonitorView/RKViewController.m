@@ -18,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
     [self createAppMonitorView];
 }
 
@@ -26,8 +31,7 @@
     
 #ifdef DEBUG
     RKAPPMonitorView *monitorView = [[RKAPPMonitorView alloc] initWithOrigin:CGPointMake(10, 100)];
-//    [[UIApplication sharedApplication].keyWindow addSubview:monitorView];
-    [self.view addSubview:monitorView];
+    [[UIApplication sharedApplication].keyWindow addSubview:monitorView];
 #else
 #endif
     
@@ -35,3 +39,23 @@
 
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

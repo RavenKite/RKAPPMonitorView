@@ -5,25 +5,63 @@
 [![License](https://img.shields.io/cocoapods/l/RKAPPMonitorView.svg?style=flat)](http://cocoapods.org/pods/RKAPPMonitorView)
 [![Platform](https://img.shields.io/cocoapods/p/RKAPPMonitorView.svg?style=flat)](http://cocoapods.org/pods/RKAPPMonitorView)
 
-## Example
+## 介绍
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+一个实时监控APP的FPS、CPU使用率和内存占用的小工具。
 
-## Requirements
 
-## Installation
 
-RKAPPMonitorView is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+## 系统要求
 
-```ruby
-pod 'RKAPPMonitorView'
+此项目最低支持 `iOS 8.0`。
+
+
+## 安装
+
+此项目支持 [CocoaPods](http://cocoapods.org)安装。
+
+1. 在Podfile中添加 `pod 'RKAPPMonitorView' `
+2. 在终端中执行 `pod install` 或 `pod update`
+3. 在项目中 `#import <RKAPPMonitorView/RKAPPMonitorView.h>`
+
+
+## 使用方法
+
+### Main Interface 为 Main.stroyboard
+
+在 `keyWindow.rootViewController` 的 `- (void)viewDidAppear:(BOOL)animated` 中添加如下代码：
+
+```
+#ifdef DEBUG
+RKAPPMonitorView *monitorView = [[RKAPPMonitorView alloc] initWithOrigin:CGPointMake(10, 100)];
+[[UIApplication sharedApplication].keyWindow addSubview:monitorView];
+#else
+#endif
+
 ```
 
-## Author
+### Main Interface 为空 
 
-RavenKite, lipeizhuo0528@outlook.com
+即在AppDelegate中手动创建window。
+在AppDelegate中添加如下代码：
 
-## License
+```
+#ifdef DEBUG
+    APPMonitorView *monitorView = [[APPMonitorView alloc] initWithOrigin:CGPointMake(10, 100)];
+    [self.window addSubview:monitorView];
+#else
+    
+#endif
+```
 
-RKAPPMonitorView is available under the MIT license. See the LICENSE file for more info.
+
+
+
+
+
+
+
+
+
+
+

@@ -9,6 +9,8 @@
 #import <sys/sysctl.h>
 #import <mach/mach.h>
 
+#define isiPhoneX CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(375, 812))
+
 @interface RKAPPMonitorView() {
     
     NSUInteger _count;
@@ -31,11 +33,28 @@
 
 // MARK: - Life Cycle
 
-- (instancetype)initWithOrigin:(CGPoint)origin {
+- (instancetype)init {
+    self = [super init];
     
+    [self initSubviews];
+    
+    return self;
+}
+
+- (instancetype)initWithOrigin:(CGPoint)origin {
     self = [super init];
     
     _origin = origin;
+    
+    [self initSubviews];
+    
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    
+    _origin = frame.origin;
     
     [self initSubviews];
     
@@ -131,7 +150,7 @@
     [attr appendAttributedString:memoryDescStr];
     [attr appendAttributedString:memoryStr];
     
-    [attr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:13] range:NSMakeRange(0, attr.length)];
+    [attr addAttribute:NSFontAttributeName value:self.font range:NSMakeRange(0, attr.length)];
     
     self.contentLabel.attributedText = attr;
 }
@@ -147,6 +166,9 @@
     CGPoint lastPoint = [touch previousLocationInView:self];
     CGPoint offsetPoint = CGPointMake(currentPoint.x - lastPoint.x, currentPoint.y - lastPoint.y);
     
+    CGFloat topMargin = isiPhoneX ? 44 : 20;
+    CGFloat bottomMargin = isiPhoneX ? 34 : 8;
+    
     CGFloat offset_x = offsetPoint.x;
     if (self.frame.origin.x + offsetPoint.x <= 0) {
         offset_x = 0;
@@ -155,13 +177,24 @@
     }
     
     CGFloat offset_y = offsetPoint.y;
-    if (self.frame.origin.y + offsetPoint.y <= 0) {
+    if (self.frame.origin.y + offsetPoint.y <= topMargin) {
         offset_y = 0;
-    } else if (self.frame.origin.y + self.frame.size.height + offsetPoint.y >= self.superview.frame.size.height) {
-        offset_y = self.superview.frame.size.height - self.frame.origin.y - self.frame.size.height;
+    } else if (self.frame.origin.y + self.frame.size.height + offsetPoint.y >= self.superview.frame.size.height - bottomMargin) {
+        offset_y = self.superview.frame.size.height - bottomMargin - self.frame.origin.y - self.frame.size.height;
     }
     
     self.transform = CGAffineTransformTranslate(self.transform, offset_x, offset_y);
+}
+
+
+// MARK: - Setter && Getter
+
+- (UIFont *)font {
+    if (!_font) {
+        _font = [UIFont systemFontOfSize:13];
+    }
+    
+    return _font;
 }
 
 
