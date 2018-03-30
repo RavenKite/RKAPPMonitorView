@@ -7,7 +7,7 @@
 
 ## 介绍
 
-一个实时监控APP的FPS、CPU使用率和内存占用的小工具。
+一个实时监控App的FPS、CPU使用率和内存占用的小工具。
 
 ![AppMonitorViewDemo](https://github.com/RavenKite/RKImageHost/raw/master/AppMonitorViewDemo.gif)
 
