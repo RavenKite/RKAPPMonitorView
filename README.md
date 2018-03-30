@@ -9,7 +9,7 @@
 
 一个实时监控APP的FPS、CPU使用率和内存占用的小工具。
 
-此项目参考了[YYFPSLabel](https://github.com/ibireme/YYText/tree/master/Demo/YYTextDemo/YYFPSLabel.m)的实现。
+![AppMonitorViewDemo](https://github.com/RavenKite/RKImageHost/raw/master/AppMonitorViewDemo.gif)
 
 
 ## 系统要求
@@ -56,6 +56,9 @@ RKAPPMonitorView *monitorView = [[RKAPPMonitorView alloc] initWithOrigin:CGPoint
 ```
 
 
+## 参考
+
+此项目参考了[YYFPSLabel](https://github.com/ibireme/YYText/tree/master/Demo/YYTextDemo/YYFPSLabel.m)的实现。
 
 
 
