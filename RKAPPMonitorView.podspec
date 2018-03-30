@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
     s.name             = 'RKAPPMonitorView'
     
-    s.version          = '0.1.0'
+    s.version          = '0.1.1'
     
     s.summary          = '一个实时监控APP的FPS、CPU使用率和内存占用的小工具'
     
