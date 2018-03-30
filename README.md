@@ -1,6 +1,6 @@
 # RKAPPMonitorView
 
-[![CI Status](http://img.shields.io/travis/RavenKite/RKAPPMonitorView.svg?style=flat)](https://travis-ci.org/RavenKite/RKAPPMonitorView)
+<!--[![CI Status](http://img.shields.io/travis/RavenKite/RKAPPMonitorView.svg?style=flat)](https://travis-ci.org/RavenKite/RKAPPMonitorView)-->
 [![Version](https://img.shields.io/cocoapods/v/RKAPPMonitorView.svg?style=flat)](http://cocoapods.org/pods/RKAPPMonitorView)
 [![License](https://img.shields.io/cocoapods/l/RKAPPMonitorView.svg?style=flat)](http://cocoapods.org/pods/RKAPPMonitorView)
 [![Platform](https://img.shields.io/cocoapods/p/RKAPPMonitorView.svg?style=flat)](http://cocoapods.org/pods/RKAPPMonitorView)
@@ -9,6 +9,7 @@
 
 一个实时监控APP的FPS、CPU使用率和内存占用的小工具。
 
+此项目参考了[YYFPSLabel](https://github.com/ibireme/YYText/tree/master/Demo/YYTextDemo/YYFPSLabel.m)的实现。
 
 
 ## 系统要求

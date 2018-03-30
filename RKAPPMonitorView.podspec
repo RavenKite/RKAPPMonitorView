@@ -12,17 +12,12 @@ Pod::Spec.new do |s|
     
     s.homepage         = 'https://github.com/RavenKite/RKAPPMonitorView'
     
-    #  s.source           = { :svn => 'http://192.168.101.53/svn/project/TeamMobile/FrameWork/iOS/RKAPPMonitorView', :tag => s.version.to_s }
     s.source           = { :git => 'https://github.com/RavenKite/RKAPPMonitorView.git', :tag => s.version.to_s }
     
     s.ios.deployment_target = '7.0'
     
     s.source_files = 'RKAPPMonitorView/Classes/**/*'
-    
-    #    s.resource_bundles = {
-    #    'RKAPPMonitorView' => ['Assets/*.png', 'Classes/**/*.{xib, storyboard}']
-    #}
-    
+        
     s.frameworks = 'UIKit', 'Foundation'
     
     s.requires_arc = true

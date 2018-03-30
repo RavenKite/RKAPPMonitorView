@@ -71,7 +71,7 @@
     [super layoutSubviews];
     
     self.effectView.frame = self.bounds;
-    self.contentLabel.frame = CGRectInset(self.bounds, 8, 4);
+    self.contentLabel.frame = CGRectMake(6, 4, self.bounds.size.width-6, self.bounds.size.height-8);
 }
 
 
@@ -91,7 +91,7 @@
     
     self.layer.cornerRadius = 8;
     self.layer.masksToBounds = true;
-    self.frame = CGRectMake(_origin.x, _origin.y, 115, 60);
+    self.frame = CGRectMake(_origin.x, _origin.y, 105, 55);
 }
 
 - (void)initBackgroundView {
@@ -124,33 +124,7 @@
     NSInteger fps = [self fps:link];
     if (fps == -1) { return; }
     
-    CGFloat memoryUsage = [self memoryUsage];
-    CGFloat totalMemory = [self memory];
-    CGFloat CPUUsage = [self CPUPercentageUsage];
-    
-    UIColor *descColor = [UIColor whiteColor];
-    NSAttributedString *fpsDescStr = [[NSAttributedString alloc] initWithString:@"FPS: " attributes:@{NSForegroundColorAttributeName: descColor}];
-    NSAttributedString *cpuDescStr = [[NSAttributedString alloc] initWithString:@"\nCPU: " attributes:@{NSForegroundColorAttributeName: descColor}];
-    NSAttributedString *memoryDescStr = [[NSAttributedString alloc] initWithString:@"\n内存: " attributes:@{NSForegroundColorAttributeName: descColor}];
-    
-    
-    UIColor *fpsColor = [UIColor colorWithHue:0.27 * (fps/60.0 - 0.2) saturation:1 brightness:0.9 alpha:1];
-    NSAttributedString *fpsStr = [[NSAttributedString alloc] initWithString:@(fps).stringValue attributes:@{NSForegroundColorAttributeName: fpsColor}];
-    
-    UIColor *cpuColor = [UIColor colorWithHue:0.27 * ((100-CPUUsage)/100.0 - 0.2) saturation:1 brightness:0.9 alpha:1];
-    NSAttributedString *cpuStr = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%.2f%%", CPUUsage] attributes:@{NSForegroundColorAttributeName: cpuColor}];
-    
-    UIColor *memoryColor = [UIColor colorWithHue:0.27 * ((totalMemory-memoryUsage)/totalMemory - 0.2) saturation:1 brightness:0.9 alpha:1];
-    NSAttributedString *memoryStr = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%.2fMB", memoryUsage] attributes:@{NSForegroundColorAttributeName: memoryColor}];
-    
-    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithAttributedString:fpsDescStr];
-    [attr appendAttributedString:fpsStr];
-    [attr appendAttributedString:cpuDescStr];
-    [attr appendAttributedString:cpuStr];
-    [attr appendAttributedString:memoryDescStr];
-    [attr appendAttributedString:memoryStr];
-    
-    [attr addAttribute:NSFontAttributeName value:self.font range:NSMakeRange(0, attr.length)];
+    NSAttributedString *attr = [self makeAttributedString:fps];
     
     self.contentLabel.attributedText = attr;
 }
@@ -188,6 +162,40 @@
 
 
 // MARK: - Setter && Getter
+
+- (NSAttributedString *)makeAttributedString:(NSInteger)fps {
+    CGFloat memoryUsage = [self memoryUsage];
+    CGFloat totalMemory = [self memory];
+    CGFloat CPUUsage = [self CPUPercentageUsage];
+    
+    UIColor *descColor = [UIColor whiteColor];
+    NSAttributedString *fpsDescStr = [[NSAttributedString alloc] initWithString:@"FPS: " attributes:@{NSForegroundColorAttributeName: descColor}];
+    NSAttributedString *cpuDescStr = [[NSAttributedString alloc] initWithString:@"\nCPU: " attributes:@{NSForegroundColorAttributeName: descColor}];
+    NSAttributedString *memoryDescStr = [[NSAttributedString alloc] initWithString:@"\n内存: " attributes:@{NSForegroundColorAttributeName: descColor}];
+    
+    
+    UIColor *fpsColor = [UIColor colorWithHue:0.27 * (fps/60.0 - 0.2) saturation:1 brightness:0.9 alpha:1];
+    NSAttributedString *fpsStr = [[NSAttributedString alloc] initWithString:@(fps).stringValue attributes:@{NSForegroundColorAttributeName: fpsColor}];
+    
+    UIColor *cpuColor = [UIColor colorWithHue:0.27 * ((100-CPUUsage)/100.0 - 0.2) saturation:1 brightness:0.9 alpha:1];
+    NSAttributedString *cpuStr = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%.2f%%", CPUUsage] attributes:@{NSForegroundColorAttributeName: cpuColor}];
+    
+    UIColor *memoryColor = [UIColor colorWithHue:0.27 * ((totalMemory-memoryUsage)/totalMemory - 0.2) saturation:1 brightness:0.9 alpha:1];
+    NSAttributedString *memoryStr = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%.1fMB", memoryUsage] attributes:@{NSForegroundColorAttributeName: memoryColor}];
+    
+    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithAttributedString:fpsDescStr];
+    [attr appendAttributedString:fpsStr];
+    [attr appendAttributedString:cpuDescStr];
+    [attr appendAttributedString:cpuStr];
+    [attr appendAttributedString:memoryDescStr];
+    [attr appendAttributedString:memoryStr];
+    
+    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+    style.lineBreakMode = NSLineBreakByClipping;
+    [attr addAttributes:@{NSParagraphStyleAttributeName: style, NSFontAttributeName: self.font} range:NSMakeRange(0, attr.length)];
+    
+    return attr;
+}
 
 - (UIFont *)font {
     if (!_font) {
