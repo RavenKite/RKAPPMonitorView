@@ -34,8 +34,8 @@
 
 ```
 #ifdef DEBUG
-RKAPPMonitorView *monitorView = [[RKAPPMonitorView alloc] initWithOrigin:CGPointMake(10, 100)];
-[[UIApplication sharedApplication].keyWindow addSubview:monitorView];
+    RKAPPMonitorView *monitorView = [[RKAPPMonitorView alloc] initWithOrigin:CGPointMake(10, 100)];
+    [[UIApplication sharedApplication].keyWindow addSubview:monitorView];
 #else
 #endif
 
