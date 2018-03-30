@@ -1,4 +1,4 @@
-# RKAPPMonitorView
+# RKAppMonitorView
 
 <!--[![CI Status](http://img.shields.io/travis/RavenKite/RKAPPMonitorView.svg?style=flat)](https://travis-ci.org/RavenKite/RKAPPMonitorView)-->
 [![Version](https://img.shields.io/cocoapods/v/RKAPPMonitorView.svg?style=flat)](http://cocoapods.org/pods/RKAPPMonitorView)
