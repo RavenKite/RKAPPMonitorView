@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
     s.name             = 'RKAPPMonitorView'
     
-    s.version          = '0.0.1'
+    s.version          = '0.1.0'
     
     s.summary          = '一个实时监控APP的FPS、CPU使用率和内存占用的小工具'
     
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     
     s.source           = { :git => 'https://github.com/RavenKite/RKAPPMonitorView.git', :tag => s.version.to_s }
     
-    s.ios.deployment_target = '7.0'
+    s.ios.deployment_target = '8.0'
     
     s.source_files = 'RKAPPMonitorView/Classes/**/*'
         
