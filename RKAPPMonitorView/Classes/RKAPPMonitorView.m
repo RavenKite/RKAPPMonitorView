@@ -22,8 +22,6 @@
 
 @property (nonatomic, strong) CADisplayLink *link;
 
-@property (nonatomic, strong) UIVisualEffectView *effectView;
-
 @property (nonatomic, strong) UILabel *contentLabel;
 
 @end
@@ -70,7 +68,6 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    self.effectView.frame = self.bounds;
     self.contentLabel.frame = CGRectMake(6, 4, self.bounds.size.width-6, self.bounds.size.height-8);
 }
 
@@ -80,7 +77,6 @@
 - (void)initSubviews {
     
     [self configSelf];
-    [self initBackgroundView];
     [self initContentLabel];
     
     self.link = [CADisplayLink displayLinkWithTarget:self selector:@selector(tick:)];
@@ -91,19 +87,10 @@
     
     self.layer.cornerRadius = 8;
     self.layer.masksToBounds = true;
+    self.backgroundColor = [UIColor colorWithWhite:0.13 alpha:0.7];
     self.frame = CGRectMake(_origin.x, _origin.y, 105, 55);
 }
 
-- (void)initBackgroundView {
-    
-    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
-    effectView.alpha = 0.8;
-    
-    [self addSubview:effectView];
-    
-    self.effectView = effectView;
-}
 
 - (void)initContentLabel {
     

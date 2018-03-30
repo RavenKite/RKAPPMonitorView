@@ -11,11 +11,12 @@
 		1A51BE0D93751ACB47AF4BAB1AAF820D /* Pods-RKAPPMonitorView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC44B6C6E2AA7EEF6FCB884517F8334 /* Pods-RKAPPMonitorView_Example-dummy.m */; };
 		1EB636D56D5684CD8C036029231CC57E /* Pods-RKAPPMonitorView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B11D17BEF26214E59B22D76C8BC1060F /* Pods-RKAPPMonitorView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22D267E41948D9854111075FFEF2E948 /* Pods-RKAPPMonitorView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D40BA77F11B2419604F4A7CEAA525AA /* Pods-RKAPPMonitorView_Tests-dummy.m */; };
-		44B6E1DC167AE3A27BD20AC21DEE6FF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		497C84984A8FC890EFE0DF805DF43AE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		44B6E1DC167AE3A27BD20AC21DEE6FF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		497C84984A8FC890EFE0DF805DF43AE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		4EF98C9FF1B42CBC3C7525E4878FECAA /* RKAPPMonitorView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DD788A137B55120E241042AF6097872 /* RKAPPMonitorView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C82DFB4370ADD3D69AA24A7F7FACA8C /* RKAPPMonitorView.h in Headers */ = {isa = PBXBuildFile; fileRef = CFB16403EE3489D71E698A7F397B456D /* RKAPPMonitorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B60E2F9DCB870B787FBDDEBB64CD44C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		D493EF14B4CEFF0078289DF9B808D8E2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		E6D70AA7A1EF550B2EAE782FF03975FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		E8701AA6FD4F002EDE347F4B02A76493 /* RKAPPMonitorView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F50361041999CC3C8C11FC666EA7356 /* RKAPPMonitorView-dummy.m */; };
 		EAE7536D39D06BDC2A9909DA2F596BB9 /* Pods-RKAPPMonitorView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AFF33304B213A405D5C65D9621D20C04 /* Pods-RKAPPMonitorView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -31,38 +32,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		022663534AE7A1DB91D064E8BA5E9AFA /* RKAPPMonitorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RKAPPMonitorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		022663534AE7A1DB91D064E8BA5E9AFA /* RKAPPMonitorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RKAPPMonitorView.framework; path = RKAPPMonitorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0681B899B3A8377C84058DE4518E711A /* RKAPPMonitorView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RKAPPMonitorView-prefix.pch"; sourceTree = "<group>"; };
 		0D6784BA0C8D9AAD635150EF18BFCCF1 /* RKAPPMonitorView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RKAPPMonitorView.modulemap; sourceTree = "<group>"; };
 		0EC44B6C6E2AA7EEF6FCB884517F8334 /* Pods-RKAPPMonitorView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RKAPPMonitorView_Example-dummy.m"; sourceTree = "<group>"; };
 		19F4CC670B1BA4C3C00EBC46A50850EA /* Pods-RKAPPMonitorView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RKAPPMonitorView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		1D179297DCD552E431A145D6EE2E466B /* Pods-RKAPPMonitorView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RKAPPMonitorView_Example-resources.sh"; sourceTree = "<group>"; };
 		1F50361041999CC3C8C11FC666EA7356 /* RKAPPMonitorView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RKAPPMonitorView-dummy.m"; sourceTree = "<group>"; };
-		24D1E4CD0D1C13502080DDD67BC900A3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		24D1E4CD0D1C13502080DDD67BC900A3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		27D563B8F314A010C1A140ACC08FDA76 /* Pods-RKAPPMonitorView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RKAPPMonitorView_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		28C25EE83DF6F4EF7282C7197EF00BCC /* Pods-RKAPPMonitorView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RKAPPMonitorView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2A118D654BE8BADB28BCA340C6C2706F /* Pods_RKAPPMonitorView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RKAPPMonitorView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A118D654BE8BADB28BCA340C6C2706F /* Pods_RKAPPMonitorView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RKAPPMonitorView_Example.framework; path = "Pods-RKAPPMonitorView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D40BA77F11B2419604F4A7CEAA525AA /* Pods-RKAPPMonitorView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RKAPPMonitorView_Tests-dummy.m"; sourceTree = "<group>"; };
 		403BA545AD7A54A4D65CB01A19C0DBCD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A39E1137BE98838B4F64266499B08CD /* Pods-RKAPPMonitorView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RKAPPMonitorView_Tests.modulemap"; sourceTree = "<group>"; };
 		4BFFE7771B0C64128004360E32EF4BAB /* RKAPPMonitorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKAPPMonitorView.m; path = RKAPPMonitorView/Classes/RKAPPMonitorView.m; sourceTree = "<group>"; };
 		5DD788A137B55120E241042AF6097872 /* RKAPPMonitorView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RKAPPMonitorView-umbrella.h"; sourceTree = "<group>"; };
 		5ECEEFB93E358515457F5EE221390FB5 /* Pods-RKAPPMonitorView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RKAPPMonitorView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		67A9DA0C0BF6C46E8ACF1F593511FB2A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		67A9DA0C0BF6C46E8ACF1F593511FB2A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		823458D464A7828EA152C2FCD5566735 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96D07F0BEB508AD3145ED86852CB6327 /* Pods-RKAPPMonitorView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RKAPPMonitorView_Tests-resources.sh"; sourceTree = "<group>"; };
-		9EA9ED752870126F55E1111600E86763 /* RKAPPMonitorView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = RKAPPMonitorView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EA9ED752870126F55E1111600E86763 /* RKAPPMonitorView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = RKAPPMonitorView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AFF33304B213A405D5C65D9621D20C04 /* Pods-RKAPPMonitorView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RKAPPMonitorView_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B11D17BEF26214E59B22D76C8BC1060F /* Pods-RKAPPMonitorView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RKAPPMonitorView_Example-umbrella.h"; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B9079564B1C341A4028F06A7637990B6 /* Pods-RKAPPMonitorView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RKAPPMonitorView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CEB1982F653088A32E24A67C1D843D46 /* Pods-RKAPPMonitorView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RKAPPMonitorView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFB16403EE3489D71E698A7F397B456D /* RKAPPMonitorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKAPPMonitorView.h; path = RKAPPMonitorView/Classes/RKAPPMonitorView.h; sourceTree = "<group>"; };
 		D437A4E72EE8A5BAB82E6207F332C865 /* RKAPPMonitorView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RKAPPMonitorView.xcconfig; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D8D623A40722D1CBF36AD85D9C2D129E /* Pods-RKAPPMonitorView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RKAPPMonitorView_Example.modulemap"; sourceTree = "<group>"; };
 		E5877EC74FC97D7772846E3304824FB8 /* Pods-RKAPPMonitorView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RKAPPMonitorView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E91C19CD410AFCD432D2E8B193F5E273 /* Pods_RKAPPMonitorView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RKAPPMonitorView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91C19CD410AFCD432D2E8B193F5E273 /* Pods_RKAPPMonitorView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RKAPPMonitorView_Tests.framework; path = "Pods-RKAPPMonitorView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D024AD11007090D57D19AC9E6E93EB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F98D9B4E6ECA717110885364FB85FE19 /* Pods-RKAPPMonitorView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RKAPPMonitorView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FAFCD8F4486ECE35C643E3F4C7CEEA4E /* Pods-RKAPPMonitorView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RKAPPMonitorView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -78,11 +80,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6400794F6C9F54DE9350A91CF10F4088 /* Frameworks */ = {
+		7DE944523C40EEA27FEC1B0FC0FB7878 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B60E2F9DCB870B787FBDDEBB64CD44C6 /* Foundation.framework in Frameworks */,
+				E6D70AA7A1EF550B2EAE782FF03975FD /* Foundation.framework in Frameworks */,
+				D493EF14B4CEFF0078289DF9B808D8E2 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +135,23 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		6B922DB879A590DC79D93CAA49A01169 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,18 +193,10 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				76DA66726C16C3EBBCE15C32F436ED52 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
 				6B922DB879A590DC79D93CAA49A01169 /* Products */,
 				38D7B3CAD2EA2A110504436405751990 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C6BDC386A3E5B9799279081D68AB0D51 /* Pod */ = {
@@ -213,14 +225,6 @@
 			);
 			name = "Pods-RKAPPMonitorView_Tests";
 			path = "Target Support Files/Pods-RKAPPMonitorView_Tests";
-			sourceTree = "<group>";
-		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +298,7 @@
 			buildConfigurationList = 549A98723C313AB98A147CA4ADBA437E /* Build configuration list for PBXNativeTarget "RKAPPMonitorView" */;
 			buildPhases = (
 				69E97A75B9987B7199B4A8CC3037C4B1 /* Sources */,
-				6400794F6C9F54DE9350A91CF10F4088 /* Frameworks */,
+				7DE944523C40EEA27FEC1B0FC0FB7878 /* Frameworks */,
 				83BABC39F261A41B9696A80E14ED9469 /* Headers */,
 			);
 			buildRules = (

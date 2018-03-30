@@ -9,7 +9,7 @@
 #import "RKViewController.h"
 #import <RKAPPMonitorView/RKAPPMonitorView.h>
 
-@interface RKViewController ()
+@interface RKViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @end
 
@@ -37,6 +37,44 @@
     
 }
 
+
+// MARK: - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return 5;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 13;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"Section: %ld  Row: %ld", indexPath.section, indexPath.row];
+    
+    return cell;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UITableViewHeaderFooterView *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"Header"];
+    
+    if (!header) {
+        header = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:@"Header"];
+    }
+    
+    header.textLabel.text = [NSString stringWithFormat:@"Section: %ld", section];
+    
+    return header;
+}
+
+// MARK: - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+}
 
 @end
 
