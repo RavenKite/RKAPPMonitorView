@@ -49,7 +49,7 @@
 
 ```
 #ifdef DEBUG
-    APPMonitorView *monitorView = [[APPMonitorView alloc] initWithOrigin:CGPointMake(10, 100)];
+    RKAPPMonitorView *monitorView = [[RKAPPMonitorView alloc] initWithOrigin:CGPointMake(10, 100)];
     [self.window addSubview:monitorView];
 #else
     

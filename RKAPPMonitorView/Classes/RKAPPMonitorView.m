@@ -31,28 +31,10 @@
 
 // MARK: - Life Cycle
 
-- (instancetype)init {
-    self = [super init];
-    
-    [self initSubviews];
-    
-    return self;
-}
-
 - (instancetype)initWithOrigin:(CGPoint)origin {
     self = [super init];
     
     _origin = origin;
-    
-    [self initSubviews];
-    
-    return self;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    
-    _origin = frame.origin;
     
     [self initSubviews];
     
