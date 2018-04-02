@@ -196,7 +196,7 @@
     
     _count = 0;
     
-    return fps;
+    return round(fps);
 }
 
 - (CGFloat)memoryUsage {
