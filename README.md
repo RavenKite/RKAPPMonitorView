@@ -9,8 +9,7 @@
 
 一个实时监控App的FPS、CPU使用率和内存占用的小工具。
 
-<!--![AppMonitorViewDemo](https://github.com/RavenKite/RKImageHost/raw/master/AppMonitorViewDemo.gif)-->
-<!--![AppMonitorViewDemo](https://github.com/RavenKite/RKImageHost/raw/master/AppMonitorViewDemo.png)-->
+![AppMonitorViewDemo](https://github.com/RavenKite/RKImageHost/raw/master/AppMonitorViewDemo.gif)
 
 
 ## 系统要求
